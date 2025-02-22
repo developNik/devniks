@@ -3,6 +3,7 @@
 	"description": "using this package you can add blog curd in your project",
 	"type": "library",
 	"license": "MIT",
+	"version": "1.0.0",
 	"autoload": {
 		"psr-4": {
 			"Devniks\\BlogCurd\\": "src/"
@@ -24,5 +25,7 @@
 				"Devniks\\BlogCurd\\BlogServiceProvider"
 			]
 		}
-	}
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true
 }
