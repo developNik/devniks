@@ -1,0 +1,28 @@
+{
+	"name": "devniks/blog-curd",
+	"description": "using this package you can add blog curd in your project",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Devniks\\BlogCurd\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Devniks",
+			"email": "nikhilwdp@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7.4",
+		"illuminate/support": "^8.0|^9.0|^10.0"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Devniks\\BlogCurd\\BlogServiceProvider"
+			]
+		}
+	}
+}
