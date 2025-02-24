@@ -30,6 +30,7 @@ use Devniks\BlogCurd\Models\Blog;
 $blog = new Blog();
 $blog->title = 'My First Blog';
 $blog->content = 'This is the content of my first blog.';
+$blog->author = 'Nikhil Singhal';
 $blog->save();
 ```
 
