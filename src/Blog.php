@@ -6,10 +6,11 @@ use Devniks\BlogCurd\Models\Blog as BlogModel;
 
 class Blog {
 
-    public function addBlog($title, $content) {
+    public function addBlog($title, $content, $author) {
         return BlogModel::create([
             'title' => $title,
-            'content' => $content
+            'content' => $content,
+            'author' => $author ?? 'Admin'
         ]);
     }
 
@@ -25,12 +26,13 @@ class Blog {
         return $withTrashed ? BlogModel::withTrashed()->find($id) : BlogModel::find($id);
     }
 
-    public function updateBlog($id, $title, $content) {
+    public function updateBlog($id, $title, $content, $author) {
         $blog = BlogModel::find($id);
         if ($blog) {
             $blog->update([
                 'title' => $title,
-                'content' => $content
+                'content' => $content,
+                'author' => $author ?? 'Admin'
             ]);
             return true;
         }
